@@ -1,0 +1,15 @@
+{% load static %}
+<header class="cabecalho-header">
+    <div class="container">
+        <img class="cabecalho-img"  src="{% static 'img/logo-anime.png' %}" alt="">
+
+        <nav class="cabecalho-nav">
+            {% if user.is_authenticated %}
+                <a class="cabecalho-nav-link" href="{% url 'index' %}">Home</a>                
+                <a class="cabecalho-nav-link" href="{% url 'adiciona_anime' %}">Adicionar anime</a>                
+                <a class="cabecalho-nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            {% endif %}
+        </nav>
+    </div>
+</header>

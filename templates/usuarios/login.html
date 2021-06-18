@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/user-form.css' %}">
+</head>
+<body>
+
+        <!-- HEADER START -->
+        {% include 'partials/_menu.html' %}
+        <!-- END HEADER -->
+    
+    <section class="section-principal">
+        <div class="caixa-principal">
+            <div class="bloco-img">
+                <img class="img-do-bloco" src="{% static 'img/bg-anime2.jpg' %}" alt="">
+            </div>
+            <div class="bloco-formulario">
+                <p class="login-p">Login</p>
+                <form action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                        <label for="user">Email</label>
+                        <input name="email" type="text" id="user" placeholder="email@gmail.com">
+                        <label for="senha">Password</label>
+                        <input name="senha" type="password" id="senha" placeholder="***********">
+                        <input class="btn" type="submit" value="Confirm">
+                        {% include 'partials/_alert.html' %}
+                        <p><a href="{% url 'cadastro' %}">Ainda não é cadastrado? crie sua conta aqui!</a> </p>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+{% endblock %}

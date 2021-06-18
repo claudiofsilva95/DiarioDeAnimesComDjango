@@ -1,0 +1,66 @@
+.div-principal-edita-anime {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-edita-anime {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.form-edita-anime label {
+    margin: 10px 0;
+}
+.form-edita-anime input {
+    height: 30px;
+    border-radius: 5px;
+}
+.form-edita-anime input:focus {
+    outline: 0;
+}
+
+
+#img-edita-anime {
+    height: 348px;
+    width: 250px;
+    border-radius: 5px;
+    opacity: .6;
+    transition: 1.5s;
+}
+#img-edita-anime:hover {
+    opacity: 1;
+    transition: 1.5s;
+}
+
+
+.div-btn-edita-anime {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#btn-edita-anime {
+    height: 40px;
+    border-radius: 5px;
+    width: 300px;
+    background-color: rgba(8, 165, 60, 0.664);
+}
+#btn-edita-anime:hover {
+    cursor: pointer;
+}
+#btn-edita-anime:active {
+    cursor: initial;
+}
+
+#footer {
+    margin-top: 100px;
+}
+
+@media (max-width:700px) {
+    .form-edita-anime {
+        width: 80%;
+    }
+    #btn-edita-anime {
+        width:200px;
+    }
+}

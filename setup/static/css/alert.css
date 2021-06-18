@@ -1,0 +1,9 @@
+#alert-error {
+    color: rgb(180, 0, 0);
+    margin-bottom: 10px;
+}
+
+#alert-success {
+    color: green;
+    margin-bottom: 10px;
+}

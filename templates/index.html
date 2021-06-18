@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+</head>
+<body>
+
+    <!-- HEADER START -->
+        {% include 'partials/_menu.html' %}
+    <!-- END HEADER -->
+
+    <section class="img-principal">
+        <img src="{% static 'img/bg-anime.jpg' %}" alt="" class="img-principal">
+    </section>
+    
+    <section class="cards-section">
+            <h1> Lista de animes </h1>
+
+        <div class="cards-container">
+            {% for anime in animes %}
+            
+                <a href="{% url 'anime' anime.id %}">
+                    {% if anime.foto == '' %}
+                    <img class="cards-img" src="{% static 'img/sem-foto.jpg' %}" alt="">
+                    {% else  %}
+                    <img class="cards-img" src="{{ anime.foto.url }}" alt="">
+                    {% endif %}
+                    <p class="p-cards"> {{ anime.nome_anime }} </p></a>
+            
+
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

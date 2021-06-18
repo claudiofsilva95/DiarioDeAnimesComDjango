@@ -1,0 +1,57 @@
+.conteudo-principal-cria-anime{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-cria-anime {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form-cria-anime label {
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+.form-cria-anime input {
+    width: 99%;
+    height: 30px;
+    text-align: initial;
+    border-radius: 5px;
+}
+
+.div-foto {
+    display: flex;
+    align-items: center;
+}
+#foto-anime {
+    padding-left: 50px;
+}
+
+.btn-cria-anime {
+    height: 50px;
+    border-radius: 5px;
+    width: 200px;
+    background-color: rgba(8, 165, 60, 0.664);
+}
+.btn-cria-anime:hover {
+    cursor: pointer;
+}
+.btn-cria-anime:active {
+    cursor: initial ;
+}
+.btn-div {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    margin-top: 100px;   
+}
+
+@media (max-width:700px) {
+    .form-cria-anime {
+        width: 90%;
+    }
+}

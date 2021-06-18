@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    background-image: linear-gradient(to left, rgba(10, 226, 255, 0.438), rgb(0, 128, 117));
+}
+/*  Cabeçalho  */
+.cabecalho-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 180px;
+}
+.cabecalho-img {
+    height: 180px;
+}
+
+.cabecalho-nav {
+    display: flex;
+}
+
+.cabecalho-nav .cabecalho-nav-link{
+    color: black;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.cabecalho-nav .cabecalho-nav-link:hover{
+    color: red;
+}
+
+/*  Imagem principal  */
+.img-principal {
+    width: 100%;
+    height: 500px;
+}
+
+
+/* Imagens dos cards */
+
+.cards-section h1 {
+    text-align: center;
+    font-size: 2rem;
+
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cards-container a{
+    width: 23%;
+    margin-bottom: 10px;
+    margin: 1%;
+    text-decoration: none;
+    color: black;
+}
+.cards-container a:hover {
+    color: red;
+}
+
+.cards-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+.p-cards {
+    margin: 5px 0 0 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* FOOTER */
+
+.footer .container-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.copy-footer {
+    font-size: 1.3rem;
+}
+
+.lista-footer {
+    display: flex;
+}
+
+.img-footer {
+    height: 40px;
+    width: 40px;
+    opacity: 0.6;
+}
+.img-footer:hover {
+    opacity: 1;
+}
+ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.footer {
+    margin-top: 100px;
+}
+
+@media (max-width:700px) {
+    .cabecalho-header .container {
+        flex-direction: column;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .cabecalho-header {
+          height: 200px;
+    }
+    .img-principal {
+        margin-top: 10px;
+        width: 100%;
+        height: 150px;
+    }
+    .cards-container {
+        justify-content: center;
+    }
+    .cards-container a{
+        width: 80%;
+    }
+
+    .footer .container-footer {
+        justify-content: space-between;
+        margin: 0 10px;
+    }
+    .copy-footer {
+        font-size: 1rem;
+    }
+    .img-footer {
+        height: 20px;
+        width: 20px;
+        opacity: 0.6;
+    }
+    .cabecalho-nav .cabecalho-nav-link{
+        font-size: 1rem;
+    }
+}

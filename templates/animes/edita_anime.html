@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="../static/css/edita-anime.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    {% include 'partials/_menu.html' %}
+
+
+
+<div class="div-principal-edita-anime">
+    <div class="">
+        <h3>Edite o anime aqui, {{user.username}} :)</h3>
+    </div>
+
+    
+    <form class='form-edita-anime' method="POST" action="{% url 'atualiza_anime' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        
+        <input type="text" id="anime_id" name="anime_id" value="{{anime.id}}" hidden>
+    
+        
+        <label for="nome_anime"><b>Nome do Anime</b></label>
+        <input type="text" id="nome_anime" class="" name="nome_anime" placeholder="Ex. Shingeki no Kyojin"
+        value="{{anime.nome_anime}}" required>
+    
+    
+        <label for="n-eps"><b>Nº de episódios</b></label>
+        <input id="n-eps" class="" name="n-eps" placeholder="Ex. 75" value="{{ anime.n_eps }}" required>
+        
+        <label for="eps-assistidos"><b>Quantos episódiso já assistiu?</b></label>
+        <input id="eps-assistidos" class="" name="eps-assistidos" placeholder="Ex. 68" value="{{ anime.eps_assistidos }}" required>
+    
+        <label for="estado"><b> Estado </b></label>
+        <input id="estado" type="text" class="" name="estado" placeholder="Ex. Incompleto" value=" {{ anime.estado }} " required>
+        
+        <label for="nota"><b>Nota</b></label>
+        <input id="nota" type="text" class="" name="nota" placeholder="Ex. 7.5"
+        value=" {{anime.nota}} " required>
+        
+        <label for="file"><b>Foto Atual</b></label>
+        <img id="img-edita-anime" src=" {{anime.foto.url}} " alt="">
+        
+    
+        <label for="file"><b>Adicionar nova foto</b></label>
+        <input type="file" class="" name="foto_anime">
+        
+        <div class="div-btn-edita-anime">
+            <button id="btn-edita-anime"  type="submit">Atualizar</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

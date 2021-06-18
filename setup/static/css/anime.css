@@ -1,0 +1,78 @@
+.section-principal {
+    display: flex;
+    margin: 0 20px;
+}
+
+.div-img-anime img {
+    height: 500px;
+    width: 350px;
+}
+.div-list-anime {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 0 0 15px;
+}
+
+.div-list-anime p {
+    font-size: 1.5rem;
+}
+.div-list-anime h1 {
+    font-size: 2rem;
+}
+
+.div-list-anime :last-child{
+    margin-bottom: 0;
+}
+.div-btns {
+    display: flex;
+    justify-content: space-around; 
+}
+.div-btns a {
+    width: 49%;
+    color: black;
+}
+.div-btns a input{
+    width: 100%;  
+}
+
+.btn-editar {
+    width: 49%;
+    text-align: center;
+    height: 35px;
+    border-radius: 5px;
+}
+.btn-editar:hover {
+    cursor: pointer;
+}
+.btn-editar:active {
+    cursor: initial;
+}
+.editar {
+    background-color: lightgreen;
+}
+.excluir {
+    background-color: red;
+}
+
+#footer-anime {
+    margin-top: 100px;
+}
+
+
+@media (max-width:700px) {
+    .section-principal {
+        flex-direction: column;
+    }
+    .div-img-anime {
+        margin-top: 45px;
+    }
+    .div-img-anime img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .div-list-anime {
+        flex-direction: column-reverse;
+    }
+
+}

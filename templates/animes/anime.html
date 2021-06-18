@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/anime.css' %}">
+</head>
+<body>
+    <!-- HEADER START -->
+        {% include 'partials/_menu.html' %}
+    <!-- END HEADER -->
+    <section class="section-principal">
+
+        <div>
+            <div class="div-img-anime">
+                {% if anime.foto == '' %}
+                <img src="{% static 'img/sem-foto.jpg' %}" alt="">
+                {% else %}
+                <img src="{{ anime.foto.url }}" alt="">
+                {% endif %}
+            </div>
+
+                <div class="div-btns">
+                    <a href="{% url 'edita_anime' anime.id %}"><input type="button" value="Editar" class="btn-editar editar"></a>
+                    <a href="{% url 'deleta_anime' anime.id %}"><input type="button" value="Excluir" class="btn-editar excluir"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-list-anime">
+            <p><strong>Nota:</strong> {{ anime.nota }}</p>
+            <p><strong>Estado:</strong> {{anime.estado}} </p>
+            <p><strong>Nº de Episódios assistidos:</strong> {{anime.eps_assistidos}} </p>
+            <p><strong>Nº de Episódios:</strong> {{anime.n_eps}} </p>
+            <h1> {{anime.nome_anime}} </h1>
+        </div>
+    </section>
+
+{% endblock %}

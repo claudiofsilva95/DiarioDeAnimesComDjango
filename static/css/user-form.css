@@ -1,0 +1,93 @@
+.section-principal {
+    display: flex;
+    justify-content: center;
+}
+.caixa-principal {
+    display: flex;
+    height: 400px;
+    width: 75%;
+}
+#caixa-principal {
+    height: 500px;
+}
+.bloco-img {
+    width: 50%;
+}
+.img-do-bloco {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+.bloco-formulario {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bloco-formulario form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+.bloco-formulario .login-p {
+    margin: 10px 0 0 10px;
+    font-size:1.9rem;
+    font-weight: bold;
+}
+.bloco-formulario form input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: .7;
+}
+
+form label {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+}
+.btn {
+    cursor: pointer;
+}
+
+.sing-up {
+    margin-left: 10px;
+    font-size: 1.2rem;
+    margin: 0 0 12px 10px;
+}
+
+#footer {
+    margin-top: 200px;
+}
+
+.input-cadastro {
+    height: 10px;
+}
+
+@media (max-width:700px) {
+    .bloco-img {
+        width: 0%;
+    }
+    .bloco-formulario{
+        width: 100%;
+        justify-content: space-around;
+    }
+    #footer {
+        margin-top: 10px;
+    }
+    form p {
+        text-align: center;
+    }
+    .login-p {
+        text-align: center;
+    }
+    .sing-up {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .section-principal{
+        margin-top: 30px;
+    }
+}

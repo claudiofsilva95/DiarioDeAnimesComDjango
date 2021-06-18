@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/cria-anime.css' %}">
+</head>
+<body>
+    <header class="cabecalho-header">
+        <div class="container">
+            <img class="cabecalho-img"  src="{% static 'img/logo-anime.png' %}" alt="">
+
+            <nav class="cabecalho-nav">
+                <a class="cabecalho-nav-link" href="{% url 'index' %}">Home</a>                            
+                <a class="cabecalho-nav-link" href="{% url 'logout' %}">Logout</a>                
+            </nav>
+        </div>
+    </header>
+    
+    
+    
+        
+    <div class='conteudo-principal-cria-anime'>
+        <div class="">
+            <h3>Adicione um anime, {{ user.username }} :)</h3>
+        </div>
+        
+        
+        <form class="form-cria-anime" action="{% url 'adiciona_anime' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+                    <label for="nome_anime"><b>Nome do anime</b></label>
+                    <input type="text" id="nome_anime" class="input-cria-anime" name="nome_anime" placeholder="Ex. Naruto Shipuden" required>
+
+                    <label for="n_eps"><b>Nº de epsódios</b></label>
+                    <input id='n_eps' name="n_eps" type="text" class="input-cria-anime" placeholder="Ex. 500" >
+
+                    <label for="eps_assistidos"><b>Quantos episódios já assistiu?</b></label>
+                    <input id="eps_assistidos" name="eps_assistidos" placeholder="Ex. 380" required>
+
+                
+                    <label for="estado"><b> Estado </b></label>
+                    <input id="estado" type="text" class="input-cria-anime" name="estado" placeholder="Ex. Completo" required>
+
+        
+                    <label for="nota"><b>Nota</b></label>
+                    <input id="nota" type="text" class="input-cria-anime" name="nota" placeholder="Ex. 8.6 " required>
+                    <div class="div-foto">
+                        <label for="foto-anime"><b>Foto</b></label>
+                        <input id="foto-anime" type="file" class="input-cria-anime" name="foto-anime" required>
+                    </div>
+                    <div class="btn-div">
+                        <button class="btn-cria-anime" type="submit">Adicionar Anime</button>
+                    </div>
+        </form>
+    </div>
+
+{% endblock %}
